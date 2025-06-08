@@ -1,0 +1,167 @@
+---
+title: Example
+authors:
+  - name: John Doe
+    orcid: 0000-0002-0760-5497
+    corresponding: true
+    email: john.doe@somewhere.com
+    roles:
+      - Investigation
+      - Project administration
+      - Software
+      - Visualization
+    affiliations: Some University
+
+license: CC BY-SA 4.0
+keywords:
+  - La Palma
+  - Earthquakes
+
+date: last-modified
+
+abstract: |
+  In September 2021, a significant jump in seismic activity on the island of La Palma (Canary Islands, Spain) signaled the start of a volcanic crisis that still continues at the time of writing. Earthquake data is continually collected and published by the Instituto Geográphico Nacional (IGN). We have created an accessible dataset from this and completed preliminary data analysis which shows seismicity originating at two distinct depths, consistent with the model of a two reservoir system feeding the currently very active volcano.
+keypoints:
+  - You may specify 1 to 3 keypoints for this PDF template
+  - These keypoints are complete sentences and less than or equal to 140 characters
+  - 'They are specific to this PDF template, so they will not appear in other exports'
+
+citation:
+  container-title: Example Manuscript
+
+number-sections: true
+
+draft: true
+---
+
+
+## Introduction
+
+This is a simple placeholder for the manuscript's introduction. Here's a citation [@knuth84].
+
+
+## Example figure:
+
+```{python}
+#| label: fig-sample-py
+#| fig-cap: "Sample figure showing a quadratic trend."
+
+import matplotlib.pyplot as plt
+%config InlineBackend.figure_format = 'svg'
+import numpy as np
+
+x = np.arange(1, 11)
+y = x**2
+
+plt.plot(x, y, marker='o', color='blue')
+plt.title("Quadratic Trend")
+plt.xlabel("x")
+plt.ylabel("x²")
+plt.grid(True)
+plt.show()
+```
+
+## Example Table
+
+| Method     | Accuracy | Runtime |
+|------------|----------|---------|
+| Baseline   | 82.5%    | 1.2 s   |
+| Improved   | 91.3%    | 0.8 s   |
+| Optimized  | 93.1%    | 0.6 s   |
+
+## Example Image
+
+![Volcano eruption](https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/LUN_8401.jpg/1920px-LUN_8401.jpg)
+
+> 📸 *Image credit: Wikimedia Commons*
+
+::: {#fig-elephants layout-ncol=2}
+
+![Surus on the battlefield](https://images.squarespace-cdn.com/content/v1/5a02ed1990badea68d9909d7/1569416970843-RWJL07ERO3TGQ7BTD6YJ/800px-Hannibal_in_Italy_by_Jacopo_Ripanda_-_Sala_di_Annibale_-_Palazzo_dei_Conservatori_-_Musei_Capitolini_-_Rome_2016_%282%29.jpg?format=1000w){#fig-surus}
+
+![Hanno, the elephant of Pope Leo X](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZC3UcIlymIXI6DFunbr0RK71yXVr3xE7hXw&s){#fig-hanno}
+
+Famous Elephants
+:::
+
+## Example Videos
+{{< video https://www.youtube.com/embed/wo9vZccmqwc width="640" height="360" >}}
+
+
+
+## Example LaTeX Math
+
+Inline math: The Reynolds number is given by $Re = \frac{\rho u L}{\mu}$.
+
+Block math:
+
+$$
+\nabla \cdot \vec{u} = 0, \quad
+\rho \left( \frac{\partial \vec{u}}{\partial t} + \vec{u} \cdot \nabla \vec{u} \right) = -\nabla p + \mu \nabla^2 \vec{u}
+$$
+
+## ShortCodes
+
+### Lipsum 
+
+{{< lipsum 1>}}
+
+
+## Callout Notes
+
+::: {.callout-note}
+Note that there are five types of callouts, including:
+`note`, `warning`, `important`, `tip`, and `caution`.
+:::
+
+::: {.callout-tip}
+## Tip with Title
+
+This is an example of a callout with a title.
+:::
+
+::: {.callout-caution collapse="true"}
+## Expand To Learn About Collapse
+
+This is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
+:::
+
+::: {.callout-note appearance="simple"}
+
+## Pay Attention
+
+Using callouts is an effective way to highlight content that your reader give special consideration or attention.
+
+:::
+
+## Code Annotations
+
+```r
+library(tidyverse)
+library(palmerpenguins)
+penguins |>                                      # <1>
+  mutate(                                        # <2>
+    bill_ratio = bill_depth_mm / bill_length_mm, # <2>
+    bill_area  = bill_depth_mm * bill_length_mm  # <2>
+  )                                              # <2>
+```
+1. Take `penguins`, and then,
+2. add new columns for the bill ratio and bill area.
+
+
+## Article Structure
+
+### Margin Content
+
+Hello there
+
+::: {.column-margin}
+We know from *the first fundamental theorem of calculus* that for $x$ in $[a, b]$:
+
+$$\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x).$$
+:::
+
+
+
+
+

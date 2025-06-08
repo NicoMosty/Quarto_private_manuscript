@@ -1,0 +1,30 @@
+project:
+  type: manuscript
+
+manuscript:
+  article: main.qmd
+  notebooks:
+    - notebook: notebooks/notebook-data-example.ipynb
+      title: Example 1
+  meca-bundle: "bundle.zip"
+
+format:
+  html:
+    theme: cosmo
+    toc-location: left
+    comments:
+      hypothesis: true
+    citations-hover: true
+    crossrefs-hover: true
+  pdf:
+    keep-tex: true
+    documentclass: article
+    toc: true
+    number-sections: true
+  jats: default
+
+execute:
+  kernel: python3
+  freeze: true
+
+bibliography: references.bib
