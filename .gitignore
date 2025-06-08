@@ -6,6 +6,7 @@ _output/
 .quarto/
 *.pdf
 *.html
+_publish.yml
 
 # Jupyter
 .ipynb_checkpoints/
