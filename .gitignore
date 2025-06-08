@@ -3,6 +3,7 @@ _manuscript/
 site_libs/
 _freeze/
 _output/
+.quarto/
 *.pdf
 *.html
 
