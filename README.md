@@ -4,13 +4,48 @@ This repository contains a Quarto manuscript project with interactive elements, 
 
 ## Project Structure
 
+This repository contains a Quarto manuscript project template with the following structure:
+
 ```
 ├── main.qmd                # Main manuscript document
 ├── notebooks/              # Jupyter notebooks with data analysis
 │   └── notebook-data-example.ipynb
 ├── _quarto.yml             # Quarto configuration file
+├── _publish.yml            # Publication configuration
 └── references.bib          # Bibliography file
 ```
+
+## Configuration Files
+
+### _quarto.yml
+
+This file configures the Quarto project settings:
+
+- `project.type: manuscript` - Defines this as a manuscript-type project
+- `manuscript.article` - Specifies the main document (main.qmd)
+- `manuscript.notebooks` - Lists notebooks to include with their titles
+- `manuscript.meca-bundle` - Defines the MECA bundle output filename
+
+Multiple output formats are configured:
+- `html` - Web format with interactive features (comments, hover citations)
+- `pdf` - PDF output with LaTeX support
+- `jats` - Journal Article Tag Suite format for journal submissions
+
+The file also configures Python execution settings and bibliography information.
+
+### _publish.yml
+
+This file contains publication settings for Quarto Pub, which is Quarto's publishing platform. It includes:
+
+- `source: project` - Indicates the entire project should be published
+- `quarto-pub` - Contains publishing destination information
+
+**Note:** When working with this template, you should replace the placeholder publishing ID and URL with your own Quarto Pub information when ready to publish.
+
+## Usage
+
+Edit `main.qmd` to write your manuscript content and add your analysis notebooks to the `notebooks/` directory. Configure the output formats in `_quarto.yml` based on your publication requirements.
+
 
 ## Features
 
@@ -20,7 +55,6 @@ This Quarto manuscript demonstrates:
 - Interactive figures created with Python/Matplotlib
 - Tables, images, and videos
 - LaTeX math equations
-- Mermaid diagrams
 - Callouts and code annotations
 - Content rearrangement with shortcodes
 - Margin content
